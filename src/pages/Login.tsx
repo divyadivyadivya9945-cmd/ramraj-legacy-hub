@@ -56,7 +56,7 @@ const Login = () => {
           </Button>
           <p className="text-center text-sm text-muted-foreground font-body">
             Don't have an account?{" "}
-            <span className="text-primary font-semibold cursor-pointer hover:underline">Sign up</span>
+            <Link to="/signup" className="text-primary font-semibold hover:underline">Sign up</Link>
           </p>
         </form>
 
