@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-const Login = () => {
+const Signup = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { toast } = useToast();
@@ -13,8 +14,8 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Login feature coming soon!",
-      description: "Connect Lovable Cloud to enable real authentication.",
+      title: "Signup feature coming soon!",
+      description: "Connect Lovable Cloud to enable real registration.",
     });
   };
 
@@ -25,10 +26,21 @@ const Login = () => {
           <Link to="/" className="inline-block">
             <h1 className="text-3xl font-heading font-bold text-primary">Ramraj <span className="text-gradient-gold">Cottons</span></h1>
           </Link>
-          <p className="text-muted-foreground font-body text-sm mt-2">Sign in to your account</p>
+          <p className="text-muted-foreground font-body text-sm mt-2">Create a new account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-card rounded-xl p-8 shadow-elegant border border-border space-y-5">
+          <div className="space-y-2">
+            <Label htmlFor="name" className="font-body">Full Name</Label>
+            <Input
+              id="name"
+              type="text"
+              placeholder="Your full name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
           <div className="space-y-2">
             <Label htmlFor="email" className="font-body">Email</Label>
             <Input
@@ -52,11 +64,11 @@ const Login = () => {
             />
           </div>
           <Button type="submit" className="w-full">
-            Sign In
+            Create Account
           </Button>
           <p className="text-center text-sm text-muted-foreground font-body">
-            Don't have an account?{" "}
-            <Link to="/signup" className="text-primary font-semibold hover:underline">Sign up</Link>
+            Already have an account?{" "}
+            <Link to="/login" className="text-primary font-semibold hover:underline">Sign in</Link>
           </p>
         </form>
 
@@ -70,4 +82,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
