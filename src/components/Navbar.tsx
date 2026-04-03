@@ -24,9 +24,6 @@ const Navbar = () => {
           <a href="#products" className="text-sm font-body text-foreground hover:text-primary transition-colors">Products</a>
           <a href="#status" className="text-sm font-body text-foreground hover:text-primary transition-colors">Today</a>
           <a href="#contact" className="text-sm font-body text-foreground hover:text-primary transition-colors">Contact</a>
-          <Link to="/login">
-            <Button size="sm">Login</Button>
-          </Link>
         </div>
 
         {/* Mobile toggle */}
