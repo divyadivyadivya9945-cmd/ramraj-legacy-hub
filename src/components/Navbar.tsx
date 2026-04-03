@@ -39,9 +39,6 @@ const Navbar = () => {
           <a href="#products" onClick={() => setOpen(false)} className="block text-sm text-foreground hover:text-primary">Products</a>
           <a href="#status" onClick={() => setOpen(false)} className="block text-sm text-foreground hover:text-primary">Today</a>
           <a href="#contact" onClick={() => setOpen(false)} className="block text-sm text-foreground hover:text-primary">Contact</a>
-          <Link to="/login" onClick={() => setOpen(false)}>
-            <Button size="sm" className="w-full">Login</Button>
-          </Link>
         </div>
       )}
     </nav>
